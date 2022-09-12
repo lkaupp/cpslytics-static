@@ -90,7 +90,7 @@
     }).join('&');
 
     const res = await fetchData(url, encoded);
-    if (res != undefined) {
+    if (res.result === 'success') {
       form.reset();
       var formElements = form.querySelector(".input-group-newsletter")
       if (formElements) {
